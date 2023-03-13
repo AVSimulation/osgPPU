@@ -307,7 +307,7 @@ class OSGPPU_EXPORT Unit : public osg::Group {
         **/
         inline void popFrameBufferObject(osg::State& state)
         {
-            osg::FBOExtensions* ext = osg::FBOExtensions::instance(state.getContextID(), true);
+            osg::GLExtensions* ext = osg::GLExtensions::Get(state.getContextID(), true);
             ext->glBindFramebuffer(GL_FRAMEBUFFER_EXT, mPushedFBO[state.getContextID()]);
         }
 
