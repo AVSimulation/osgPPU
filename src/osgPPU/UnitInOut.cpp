@@ -42,8 +42,8 @@ namespace osgPPU
             void load (const osg::Texture2DArray &texture, osg::State &state) const
             {
                 // do only anything if such textures are supported
-                osg::Texture2DArray::Extensions* ext = osg::Texture2DArray::getExtensions(state.getContextID(), true);
-                if (ext && ext->isTexture2DArraySupported())
+                osg::GLExtensions* ext = osg::GLExtensions::Get(state.getContextID(), true);
+                if (ext && ext->isTexture2DArraySupported)
                 {
                     // create temporary image which is initialized with 0 values
                     osg::ref_ptr<osg::Image> img = new osg::Image();
@@ -83,8 +83,8 @@ namespace osgPPU
             void load (const osg::Texture3D &texture, osg::State &state) const
             {
                 // do only anything if such textures are supported
-                osg::Texture3D::Extensions* ext = osg::Texture3D::getExtensions(state.getContextID(), true);
-                if (ext && ext->isTexture3DSupported())
+                osg::GLExtensions* ext = osg::GLExtensions::Get(state.getContextID(), true);
+                if (ext && ext->isTexture3DSupported)
                 {
                     // create temporary image which is initialized with 0 values
                     osg::ref_ptr<osg::Image> img = new osg::Image();
