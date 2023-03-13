@@ -124,7 +124,7 @@ osg::StateSet* createState(osgPPU::Processor* processor)
     }
 
     // get max 3D texture size
-    GLint textureSize = osg::Texture3D::getExtensions(0,true)->maxTexture3DSize();
+    GLint textureSize = osg::GLExtensions::Get(0,true)->maxTexture3DSize;
     if (textureSize > 256)
         textureSize = 256;
 

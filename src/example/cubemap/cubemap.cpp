@@ -420,7 +420,7 @@ int main(int argc, char** argv)
     while (arguments.read("--fbo")) { renderImplementation = osg::Camera::FRAME_BUFFER_OBJECT; }
     while (arguments.read("--pbuffer")) { renderImplementation = osg::Camera::PIXEL_BUFFER; }
     while (arguments.read("--fb")) { renderImplementation = osg::Camera::FRAME_BUFFER; }
-    while (arguments.read("--window")) { renderImplementation = osg::Camera::SEPERATE_WINDOW; }
+    while (arguments.read("--window")) { renderImplementation = osg::Camera::SEPARATE_WINDOW; }
 
 
     // any option left unread are converted into errors to write out later.
