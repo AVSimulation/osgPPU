@@ -58,7 +58,7 @@ namespace osgPPU
                     memset(img->data(), 0, img->getTotalSizeInBytesIncludingMipmaps() * sizeof(unsigned char));
 
                     // create the texture in usual OpenGL way
-                    ext->glTexImage3D( GL_TEXTURE_2D_ARRAY_EXT, 0, texture.getInternalFormat(),
+                    ext->glTexImage3D( GL_TEXTURE_2D_ARRAY, 0, texture.getInternalFormat(),
                         texture.getTextureWidth(), texture.getTextureHeight(), texture.getTextureDepth(),
                         texture.getBorderWidth(), texture.getSourceFormat() ? texture.getSourceFormat() : texture.getInternalFormat(),
                         texture.getSourceType() ? texture.getSourceType() : GL_UNSIGNED_BYTE,
