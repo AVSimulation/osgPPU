@@ -96,11 +96,6 @@ LINK_CORELIB_DEFAULT(${LIB_NAME})
 # Some definitions for debug and msvc
 #-----------------------------------
 SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES DEBUG_POSTFIX "d")
-if(MSVC)
-    SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES PREFIX "../")
-    SET_TARGET_PROPERTIES(${LIB_NAME} PROPERTIES IMPORT_PREFIX "../")
-endif(MSVC)
-
 
 #-----------------------------------
 # Include install module
