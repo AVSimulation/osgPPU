@@ -56,8 +56,9 @@ SOURCE_GROUP(
 # FIXME: Do not run for OS X framework
 # --------------------------------------------------
 INSTALL(
-    FILES        ${LIB_PUBLIC_HEADERS}
-    DESTINATION  ${INSTALL_INCDIR}/${LIB_NAME}
+    FILES           ${LIB_PUBLIC_HEADERS}
+    DESTINATION     ${INSTALL_INCDIR}/${LIB_NAME}
+    CONFIGURATIONS  Release
 #    COMPONENT    ${PACKAGE_HEADERS} 
 )
 
