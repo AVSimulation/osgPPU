@@ -257,9 +257,9 @@ class Teapot : public osg::Drawable
         
         // we need to set up the bounding box of the data too, so that the scene graph knows where this
         // objects is, for both positioning the camera at start up, and most importantly for culling.
-        virtual osg::BoundingBox computeBound() const
+        virtual osg::BoundingSphere computeBound() const
         {
-            osg::BoundingBox bbox;
+            osg::BoundingSphere bbox;
 
             // follow is some truely horrible code required to calculate the 
             // bounding box of the teapot.  Have used the original code above to do
